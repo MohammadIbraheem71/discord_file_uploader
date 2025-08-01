@@ -37,23 +37,27 @@ function FileList() {
       <div className="row">
         {files.map((file, index) => (
           <div key={index} className="col-md-4 mb-4">
-            <div className="card h-100 shadow-sm">
+            <div className="file-card card shadow-sm h-100">
               <div className="card-body d-flex flex-column justify-content-between">
-                <p className="card-text">
+                <p className="card-text fw-semibold">
                   {file.file_name || `File ${index + 1}`}
                 </p>
-                <button
-                  className="btn btn-sm btn-outline-success mt-2"
-                  onClick={() => download_file_from_url(file.file_url)}
-                >
-                  Download
-                </button>
-                <button
-                  className="btn btn-sm btn-outline-danger mt-2"
-                  onClick={() => handleDelete(file.file_message_id)}
-                >
-                  Delete
-                </button>
+                <div className="d-flex justify-content-between mt-3">
+                  <button
+                    className="btn btn-sm btn-outline-primary"
+                    onClick={() => download_file_from_url(file.file_url)}
+                  >
+                    <i className="bi bi-download me-1" />
+                    Download
+                  </button>
+                  <button
+                    className="btn btn-sm btn-outline-danger"
+                    onClick={() => handleDelete(file.file_message_id)}
+                  >
+                    <i className="bi bi-trash me-1" />
+                    Delete
+                  </button>
+                </div>
               </div>
             </div>
           </div>

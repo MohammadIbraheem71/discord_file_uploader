@@ -1,0 +1,81 @@
+:root {
+  --primary-bg: #a7c5e2;
+  --card-bg: #b5cfe7;
+  --accent: #3399ff;
+  --accent-dark: #267acc;
+  --text-color: #2c3e50;
+  --soft-border: #d6e4f0;
+  --upload-bg: #f0f8ff;
+  --hover-bg: #e0efff;
+}
+
+body {
+  background-color: var(--primary-bg);
+  color: var(--text-color);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+h1, h2, h3, h4, h5 {
+  color: var(--accent-dark);
+}
+
+.upload-card {
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--soft-border);
+}
+
+.card {
+  border-radius: 12px;
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--soft-border);
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.upload-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.btn-outline-success {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.btn-outline-success:hover {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  border-color: var(--accent-dark);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-dark);
+  border-color: var(--accent-dark);
+}
+
+input[type="file"] {
+  background-color: var(--upload-bg);
+  border: 1px solid var(--soft-border);
+}
+
+.logo {
+  height: 200px;
+  width: auto;
+}
+
+p {
+  margin-bottom: 0.5rem;
+}
